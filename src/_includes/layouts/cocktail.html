@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+
+<head>
+	{% include "head.html" %}
+	<title>{{ title }} - Wags Family Recipes</title>
+
+<body>
+	{% include "header.html" %}
+
+	<main>
+		<h1>{{ title }}</h1>
+
+		<section class="details">
+			<div>
+				<h3>Information</h3>
+				<ul class="metadata">
+					<li>
+						<span class="title">Date Added:</span>
+						<span class="value">{{ dateString }}</span>
+					</li>
+
+					{% if servings %}
+						<li>
+							<span class="title">Servings:</span>
+							<span class="value">{{ servings }}</span>
+						</li>
+					{% endif %}
+
+					{% if source and sourceUrl %}
+						<li>
+							<span class="title">Source:</span>
+							<span class="value"><a href="{{ sourceUrl }}" target="_blank" rel="noreferrer noopener">{{ source }}</a></span>
+						</li>
+					{% elsif source %}
+						<li>
+							<span class="title">Source:</span>
+							<span class="value">{{ source }}</span>
+						</li>
+					{% endif %}
+
+					<li>
+						<span class="title">Tags:</span>
+						<span class="value">{% tagList tags %}</span>
+					</li>
+				</ul>
+			</div>
+
+			{% if calories or protein or carbohydrates or fat or potassium %}
+				<div>
+					<h3>Nutrition Information</h3>
+					<ul class="nutrition-info">
+						{% if calories %}
+							<li>
+								<span class="title">Calories:</span>
+								<span class="value">{{ calories }}</span>
+							</li>
+						{% endif %}
+
+						{% if protein %}
+							<li>
+								<span class="title">Protein:</span>
+								<span class="value">{{ protein }}g</span>
+							</li>
+						{% endif %}
+
+						{% if carbohydrates %}
+							<li>
+								<span class="title">Carbohydrates:</span>
+								<span class="value">{{ carbohydrates }}g</span>
+							</li>
+						{% endif %}
+
+						{% if fat %}
+							<li>
+								<span class="title">Fat:</span>
+								<span class="value">{{ fat }}g</span>
+							</li>
+						{% endif %}
+
+						{% if potassium %}
+							<li>
+								<span class="title">Potassium:</span>
+								<span class="value">{{ potassium }}mg</span>
+							</li>
+						{% endif %}
+					</ul>
+				</div>
+			{% endif %}
+		</section>
+
+		<section class="content">
+			{{ content }}
+		</section>
+	</main>
+</body>
+
+</html>

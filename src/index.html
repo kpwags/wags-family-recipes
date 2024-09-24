@@ -1,0 +1,21 @@
+---
+layout: "layouts/layout.html"
+title: ""
+---
+
+<h1>All Recipes</h1>
+
+{% renderTemplate "webc" %}
+<recipe-filters></recipe-filters>
+{% endrenderTemplate %}
+
+<ul class="recipe-list">
+	{% for post in collections.allrecipes %}
+	  	<li data-title="{{ post.data.title }}" data-tags="{{ post.data.tagList }}">
+			<a href="{{ post.url }}">
+				<span class="recipe-name">{{ post.data.title }}</span>
+				<span class="recipe-date">{{ post.data.dateString }}</span>
+			</a>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+---
+layout: "layouts/layout.html"
+title: "Baking Recipes"
+---
+
+<h1>Baking Recipes</h1>
+
+{% renderTemplate "webc" %}
+<baking-filters></baking-filters>
+{% endrenderTemplate %}
+
+<ul class="recipe-list">
+	{% for post in collections.baking %}
+	  {% if post.data.title.length > 0 %}
+	  	<li data-title="{{ post.data.title }}" data-tags="{{ post.data.tagList }}">
+			<a href="{{ post.url }}">
+				<span class="recipe-name">{{ post.data.title }}</span>
+				<span class="recipe-date">{{ post.data.dateString }}</span>
+			</a>
+		</li>
+	  {% endif %}
+	{% endfor %}
+</ul>

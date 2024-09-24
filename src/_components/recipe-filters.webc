@@ -1,0 +1,17 @@
+<div class="filters">
+	<label for="keywords">
+		Keywords
+		<input type="text" id="keywords" name="keywords" />
+	</label>
+	<div class="filter-list">
+		<label for="all"><input type="radio" id="all" name="recipeTags" checked />All</label>
+		<label for="quick"><input type="radio" id="quick" name="recipeTags" />Quick</label>
+		<label for="chicken"><input type="radio" id="chicken" name="recipeTags" />Chicken</label>
+		<label for="pork"><input type="radio" id="pork" name="recipeTags" />Pork</label>
+		<label for="beef"><input type="radio" id="beef" name="recipeTags" />Beef</label>
+		<label for="seafood"><input type="radio" id="seafood" name="recipeTags" />Seafood</label>
+		<label for="vegetarian"><input type="radio" id="vegetarian" name="recipeTags" />Vegetarian</label>
+		<label for="slow-cooker"><input type="radio" id="slow-cooker" name="recipeTags" />Slow Cooker</label>
+		<label for="instant-pot"><input type="radio" id="instant-pot" name="recipeTags" />Instant Pot</label>
+	</div>
+</div>
