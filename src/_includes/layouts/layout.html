@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+
+<head>
+	{% include "head.html" %}
+
+	{% if title != '' %}
+	<title>{{ title }} - Wags Family Recipes</title>
+	{% endif %}
+
+	{% if title == "" %}
+	<title>Wags Family Recipes</title>
+	{% endif %}
+</head>
+
+<body>
+	{% include "header.html" %}
+
+	<main>{{ content }}</main>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#7830db",
+		"titleBar.inactiveBackground": "#7830db",
+		"titleBar.activeForeground": "#ffffff",
+		"activityBar.activeBackground": "#422071",
+		"activityBarBadge.background": "#e73546",
+		"activityBarBadge.foreground": "#ffffff",
+		"activityBar.inactiveForeground": "#ffffff",
+		"activityBar.background": "#7830db",
+		"activityBar.foreground": "#ffffff",
+		"statusBar.background": "#7830db",
+		"statusBar.border": "#7830db",
+		"statusBarItem.remoteBackground": "#7830db",
+		"statusBarItem.remoteForeground": "#ffffff",
+		"statusBar.foreground": "#ffffff"
+	},
+	"workbench.colorTheme": "Nord",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/.next": true
+	},
+	"[markdown]": {
+		"editor.formatOnSave": false,
+		"editor.wordWrap": "off",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[mdx]": {
+		"editor.formatOnSave": false,
+		"editor.wordWrap": "off"
+	}
+}

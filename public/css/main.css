@@ -1,0 +1,322 @@
+html,
+body {
+    background-color: var(--grey-3);
+    color: var(--text);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-family: var(--font);
+    padding: 0;
+    margin: 0;
+}
+
+/* CATCH WHEN I MISS A LABEL OR ALT TEXT */
+img:not([alt]),
+svg:not([aria-label]) {
+    border: 5px solid red;
+}
+
+main {
+    width: var(--width);
+    margin: 32px auto 0 auto;
+    border-radius: 6px;
+    max-width: 100%;
+}
+
+hr {
+    width: 250px;
+    margin: 40px auto;
+    border-bottom: 1px solid var(border-color);
+    background-color: transparent;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--purple-1);
+    margin: 0 0 32px 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--purple-2);
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: var(--purple-1);
+    font-weight: 500;
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 2.25rem;
+        margin: 0 0 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.65rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.35rem;
+    }
+
+    h6 {
+        font-size: 1.25rem;
+    }
+}
+
+h1 span,
+h2 span,
+h3 span,
+.no-break {
+    white-space: nowrap;
+}
+
+p {
+    line-height: 32px;
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+ul li,
+ol li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+a,
+a:visited {
+    color: var(--purple-1);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--purple-2);
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+header nav {
+    display: block;
+    text-align: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 32px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+
+ul.recipe-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.recipe-list li {
+    padding: 8px;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    list-style-type: none;
+
+    &:hover {
+        background-color: var(--border-color);
+    }
+}
+
+ul.recipe-list li:first-child,
+ul.recipe-list li[hidden] + li:not([hidden]) {
+    border-top: 1px solid var(--border-color);
+}
+
+ul.recipe-list li a {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+ul.recipe-list li a span.recipe-name {
+    text-decoration: underline;
+    max-width: 60%;
+}
+
+ul.recipe-list li a span.recipe-date {
+    color: var(--text);
+    text-align: right;
+    max-width: 40%;
+}
+
+section.details {
+    display: flex;
+    column-gap: 48px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+section.details div {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    section.details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+
+ul.metadata,
+ul.nutrition-info {
+    margin: 0;
+    margin: 0;
+    margin-block: 0;
+    padding-inline: 0;
+}
+
+ul.metadata li,
+ul.nutrition-info li {
+    display: flex;
+    column-gap: 8px;
+    list-style-type: none;
+}
+
+ul.metadata li span.title {
+    font-weight: 700;
+    width: 125px;
+}
+
+ul.nutrition-info li span.title {
+    font-weight: 700;
+    width: 150px;
+}
+
+.content {
+    margin-top: 32px;
+}
+
+.tag-page-header {
+    text-transform: uppercase;
+    font-size: 3.4rem;
+}
+
+.tag-page-header span {
+    font-size: 1.33rem;
+    display: block;
+    font-weight: 400;
+}
+
+.filters {
+    margin: 32px 0;
+    padding: 16px 0;
+    display: flex;
+    column-gap: 64px;
+    justify-content: space-between;
+}
+
+.filters label {
+    font-size: 0.8rem;
+}
+
+.filters input[type="text"] {
+    display: block;
+    width: 300px;
+    padding: 8px;
+}
+
+.filters .filter-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .filters {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+
+.filters .filter-list input {
+    display: none;
+}
+
+.filters .filter-list label {
+    border: 1px solid var(--purple-1);
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filters .filter-list label:has(input:checked) {
+    background-color: var(--purple-1);
+    color: var(--white-1);
+}
+
+pre {
+    margin: 16px;
+    border: 1px solid var(--border-color);
+}
+
+pre code {
+    font-size: 0.8rem;
+    padding: 16px;
+}

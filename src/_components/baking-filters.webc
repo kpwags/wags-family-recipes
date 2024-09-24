@@ -1,0 +1,6 @@
+<div class="filters">
+	<label for="keywords">
+		Keywords
+		<input type="text" id="keywords" name="keywords" />
+	</label>
+</div>

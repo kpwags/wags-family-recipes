@@ -1,0 +1,14 @@
+<div class="filters">
+	<label for="keywords">
+		Keywords
+		<input type="text" id="keywords" name="keywords" />
+	</label>
+	<div class="filter-list">
+		<label for="all"><input type="radio" id="all" name="recipeTags" checked />All</label>
+		<label for="gin"><input type="radio" id="gin" name="recipeTags" />Gin</label>
+		<label for="rum"><input type="radio" id="rum" name="recipeTags" />Rum</label>
+		<label for="tequila"><input type="radio" id="tequila" name="recipeTags" />Tequila</label>
+		<label for="vodka"><input type="radio" id="vodka" name="recipeTags" />Vodka</label>
+		<label for="whiskey"><input type="radio" id="whiskey" name="recipeTags" />Whiskey</label>
+	</div>
+</div>
